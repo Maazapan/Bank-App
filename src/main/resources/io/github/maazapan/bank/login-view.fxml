@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="523.0" prefWidth="964.0" scaleShape="false" spacing="20.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.maazapan.bank.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label fx:id="closeLabel" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" onMouseClicked="#onMouseClickClose" prefHeight="29.0" prefWidth="68.0" scaleShape="false" style="-fx-background-color: #FA6363;" text="      X" textAlignment="CENTER" textFill="WHITE" translateX="450.0" translateY="-117.0">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
+   <TextField cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Correo Electronico" scaleShape="false" style="-fx-background-color: transparent;" translateX="-300.0" translateY="-15.0">
+      <font>
+         <Font size="16.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets></TextField>
+   <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="8.0" prefWidth="300.0" translateX="-300.0" translateY="-40.0" />
+   <PasswordField cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Contraseña" scaleShape="false" style="-fx-background-color: transparent;" translateX="-300.0" translateY="-49.0">
+      <font>
+         <Font size="16.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </PasswordField>
+   <Separator layoutX="342.0" layoutY="213.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="8.0" prefWidth="300.0" translateX="-300.0" translateY="-72.0" />
+   <Label prefHeight="36.0" prefWidth="226.0" text="Has olvidado tu contraseña?" textFill="#163961" translateX="-336.0" translateY="-90.0" translateZ="1.0" underline="true">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+    <Button fx:id="loginButton" onAction="#onHelloButtonClick" onMouseEntered="#onLoginMouseEntered" onMouseExited="#onLoginMouseExited" prefHeight="35.0" prefWidth="133.0" style="-fx-background-color: #4581cb;" text="Iniciar Sesion" textAlignment="JUSTIFY" textFill="WHITE" translateX="-383.0" translateY="-87.0">
+      <font>
+         <Font name="Calibri Bold" size="19.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
+</VBox>
