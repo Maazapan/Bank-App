@@ -1,17 +1,17 @@
 package io.github.maazapan.bank;
 
-import io.github.maazapan.bank.manager.BankManager;
+import io.github.maazapan.bank.manager.menus.MenuManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class BankApplication extends Application {
 
-    private final BankManager bankManager = new BankManager();
+    private final MenuManager menuManager = new MenuManager();
     private static Stage stage;
 
     @Override
     public void start(Stage stage) throws Exception {
-        bankManager.loadLoginMenu(stage);
+        menuManager.loginMenu(stage);
         BankApplication.stage = stage;
     }
 

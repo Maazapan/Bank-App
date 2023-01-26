@@ -1,7 +1,7 @@
 module io.github.maazapan.bank {
     requires javafx.controls;
     requires javafx.fxml;
-
+    requires java.sql;
 
     opens io.github.maazapan.bank to javafx.fxml;
     exports io.github.maazapan.bank;
