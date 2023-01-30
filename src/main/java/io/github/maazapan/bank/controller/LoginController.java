@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Border;
+import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -19,6 +21,8 @@ public class LoginController {
     private PasswordField passwordField;
     @FXML
     private Label infoLabel;
+    @FXML
+    private Label closeLabel;
 
     @FXML
     protected void onLoginButtonClick() {
@@ -44,16 +48,25 @@ public class LoginController {
     protected void onLoginMouseExited() {
         loginButton.setScaleY(1);
         loginButton.setScaleX(1);
+
+        loginButton.setStyle("-fx-background-color: #4581cb");
     }
 
     @FXML
     protected void onLoginMouseEntered() {
         loginButton.setScaleY(1.05);
         loginButton.setScaleX(1.05);
+
+        loginButton.setStyle("-fx-background-color: #356299");
     }
 
     @FXML
     protected void onMouseClickClose() {
-        System.exit(0);
+        closeLabel.getScene().getWindow().hide();
+    }
+
+    @FXML
+    protected void onMouseClickMinimize() {
+        ((Stage) closeLabel.getScene().getWindow()).setIconified(true);
     }
 }

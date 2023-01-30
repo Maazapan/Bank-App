@@ -10,7 +10,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="356.0" style="-fx-background-image: url('logo_3.png'); -fx-background-position: center;" translateX="-278.0" translateY="216.0" />
+   <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="209.0" prefWidth="356.0" style="-fx-background-image: url('logo_3.png'); -fx-background-position: center;" translateX="-278.0" translateY="261.0" />
    <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="291.0" text="Ingresa a tu Cuenta Bancaria" textFill="#464646" translateX="-300.0" translateY="203.0">
       <font>
          <Font name="System Bold" size="19.0" />
@@ -20,7 +20,7 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Label alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="334.0" prefWidth="206.0" scaleShape="false" scaleX="1.7" scaleY="1.6" scaleZ="23.0" style="-fx-background-color: #4581cb #4581cb;" translateX="310.0" translateY="-48.0" />
+   <Label alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="334.0" prefWidth="206.0" scaleShape="false" scaleX="1.7" scaleY="1.6" scaleZ="23.0" style="-fx-background-color: #4581cb #4581cb;" translateX="310.0" translateY="2.0" />
    <TextField fx:id="mailField" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Correo Electronico" scaleShape="false" style="-fx-background-color: transparent;" translateX="-300.0" translateY="-215.0">
       <font>
          <Font size="16.0" />
@@ -53,4 +53,20 @@
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
+   <Label fx:id="closeLabel" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClickClose" prefHeight="35.0" prefWidth="59.0" scaleShape="false" text="X" textFill="WHITE" translateX="451.0" translateY="-696.0">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
+   <Label fx:id="minimizeLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClickMinimize" prefHeight="25.0" prefWidth="18.0" scaleX="3.0" scaleY="2.0" text="-" textFill="WHITE" translateX="420.0" translateY="-753.0">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Label>
 </VBox>
