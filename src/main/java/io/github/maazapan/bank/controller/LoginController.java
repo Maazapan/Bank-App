@@ -41,7 +41,7 @@ public class LoginController {
             infoLabel.setText("Correo o contraseña incorrectos!");
             return;
         }
-        bankManager.login(mail, password);
+        bankManager.login();
     }
 
     @FXML

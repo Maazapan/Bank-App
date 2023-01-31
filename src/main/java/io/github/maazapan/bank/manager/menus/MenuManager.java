@@ -7,6 +7,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 public class MenuManager {
 
     public void loginMenu(Stage stage) throws Exception {
@@ -15,11 +17,20 @@ public class MenuManager {
 
         stage.setResizable(true);
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setTitle("Bienvenido a Virtual Bank!");
-        stage.getIcons().add(new Image("logo_icon.png"));
         stage.setScene(scene);
         stage.show();
+    }
 
-        new SQLManager().connect();
+    public void mainMenu(Stage stage)  {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(BankMenu.MAIN_MENU.getResource());
+
+            Scene scene = new Scene(fxmlLoader.load(), 964, 523);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

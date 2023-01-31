@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.maazapan.bank.controller.MainController">
+   <children>
+      <AnchorPane layoutY="4.0" prefHeight="523.0" prefWidth="618.0">
+         <children>
+            <TextField cacheShape="false" centerShape="false" focusTraversable="false" layoutX="80.0" layoutY="285.0" prefHeight="35.0" prefWidth="318.0" promptText="Introduce el Nombre" scaleShape="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <Separator layoutX="88.0" layoutY="312.0" prefHeight="16.0" prefWidth="200.0" />
+            <TextField cacheShape="false" centerShape="false" focusTraversable="false" layoutX="327.0" layoutY="285.0" prefHeight="35.0" prefWidth="88.0" promptText="Cantidad" scaleShape="false" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Separator layoutX="327.0" layoutY="312.0" prefHeight="16.0" prefWidth="116.0" />
+         </children></AnchorPane>
+      <Label layoutX="491.0" layoutY="-1.0" prefHeight="334.0" prefWidth="206.0" scaleX="1.7" scaleY="1.6" style="-fx-background-color: #4581cb #4581cb;" translateX="198.0" translateY="99.0" />
+      <Label fx:id="minimizeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="516.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClickMinimize" prefHeight="22.0" prefWidth="16.0" scaleX="3.0" scaleY="2.0" text="-" textFill="WHITE" translateX="383.0" translateY="-202.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="closeLabel" alignment="CENTER" layoutX="464.0" layoutY="155.0" onMouseClicked="#onMouseClickClose" prefHeight="30.0" prefWidth="48.0" text="X" textFill="WHITE" translateX="451.0" translateY="-156.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="45.0" layoutY="186.0" prefHeight="30.0" prefWidth="450.0" text="Selecciona Una Funcion">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLabel2" alignment="CENTER" layoutX="88.0" layoutY="226.0" prefHeight="40.0" prefWidth="363.0" text="Para continuar por favor selecciona una funcion.">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="addLabel" layoutX="664.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onMouseEnteredAddLabel" onMouseExited="#onMouseExitedAddLabel" opacity="0.49" prefHeight="77.0" prefWidth="116.0" style="-fx-padding: 200px; -fx-border-radius: 20px; -fx-border-color: BLACK; -fx-border-width: 3; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label alignment="CENTER" layoutX="664.0" layoutY="137.0" prefHeight="30.0" prefWidth="116.0" text="Agregar Nuevo">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="702.0" layoutY="79.0" onMouseEntered="#onMouseEnteredAddLabel" onMouseExited="#onMouseExitedAddLabel" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url('add.png'); -fx-background-position: center; -fx-background-size: 40;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="removeLabel" layoutX="799.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onMouseEnteredRemoveLabel" onMouseExited="#onMouseExitedRemoveLabel" opacity="0.49" prefHeight="77.0" prefWidth="116.0" style="-fx-padding: 200px; -fx-border-radius: 20px; -fx-border-color: BLACK; -fx-border-width: 3; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label alignment="CENTER" layoutX="799.0" layoutY="137.0" prefHeight="30.0" prefWidth="116.0" text="Remover">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="837.0" layoutY="79.0" onMouseEntered="#onMouseEnteredRemoveLabel" onMouseExited="#onMouseExitedRemoveLabel" prefHeight="40.0" prefWidth="40.0" style="-fx-background-image: url('remove_icon.png'); -fx-background-position: center; -fx-background-size: 40;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="requestLabel" layoutX="799.0" layoutY="188.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onMouseEnteredRequestLabel" onMouseExited="#onMouseExitedRequestLabel" opacity="0.49" prefHeight="77.0" prefWidth="116.0" style="-fx-padding: 200px; -fx-border-radius: 20px; -fx-border-color: BLACK; -fx-border-width: 3; -fx-background-radius: 20;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" layoutX="799.0" layoutY="265.0" prefHeight="30.0" prefWidth="116.0" text="Consultar">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="re" layoutX="829.0" layoutY="201.0" onMouseEntered="#onMouseEnteredRequestLabel" onMouseExited="#onMouseExitedRequestLabel" prefHeight="51.0" prefWidth="54.0" style="-fx-background-image: url('request_icon.png'); -fx-background-position: center; -fx-background-size: 54;" />
+   </children>
+</AnchorPane>

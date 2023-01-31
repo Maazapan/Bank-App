@@ -11,6 +11,7 @@ public class SQLManager {
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:database.db");
+            this.createTable();
 
             System.out.println("Connected to database!");
 
@@ -22,7 +23,7 @@ public class SQLManager {
 
     private void createTable() throws SQLException {
         Statement statement = connection.createStatement();
-        statement.execute("CREATE TABLE IF NOT EXISTS bank (account_id TEXT, name TEXT, money DOUBLE, mail TEXT, password TEXT)");
+        statement.execute("CREATE TABLE IF NOT EXISTS bank (account_id TEXT, name TEXT, date TEXT, money DOUBLE)");
     }
 
     /**
@@ -31,12 +32,10 @@ public class SQLManager {
      * @param accountID ID de la cuenta
      * @param name      Nombre de la persona
      * @param money     Dinero que tiene la persona
-     * @param mail      Correo de la persona
-     * @param password  Contraseña de la cuenta
      */
-    public void insertData(UUID accountID, String name, double money, String mail, String password) {
+    public void insertData(UUID accountID, String name, String date, double money) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO bank (account_id, name, money, mail, password) VALUES (" + accountID.toString() + ", " + name + ", " + money + ", " + mail + ", " + password + ")");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO bank (account_id, name, date, money) VALUES (" + accountID.toString() + ", " + name + ", " + date + ", " + money + ")");
             preparedStatement.execute();
 
         } catch (SQLException e) {
@@ -72,7 +71,7 @@ public class SQLManager {
     public void setMoney(double money, UUID accountID) {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM bank WHERE account_id = " + accountID.toString());
-            statement.setDouble(3, money);
+            statement.setDouble(4, money);
             statement.execute();
 
         } catch (SQLException e) {
